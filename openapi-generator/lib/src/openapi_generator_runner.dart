@@ -55,6 +55,7 @@ class OpenapiGenerator extends GeneratorForAnnotation<annots.Openapi> {
       }
 
       command = appendTypeMappingCommandArgs(annotation, command, separator);
+      command = appendImportMappingCommandArgs(annotation, command, separator);
 
       command =
           appendReservedWordsMappingCommandArgs(annotation, command, separator);
