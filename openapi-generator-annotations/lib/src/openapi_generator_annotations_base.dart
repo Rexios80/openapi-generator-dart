@@ -333,11 +333,6 @@ enum Generator {
   /// FormData, Request Cancellation, File downloading, Timeout etc
   /// https://pub.flutter-io.cn/packages/dio
   dio,
-
-  /// This uses the generator provided by bluetrainsoftware which internally uses the dio package
-  ///
-  /// You can read more about it here https://github.com/dart-ogurets/dart-openapi-maven
-  dioAlt,
 }
 
 enum Wrapper { fvm, flutterw, none }
