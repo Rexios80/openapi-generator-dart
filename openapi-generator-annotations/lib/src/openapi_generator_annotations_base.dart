@@ -253,62 +253,6 @@ class DioProperties extends AdditionalProperties {
             useEnumExtension: useEnumExtension);
 }
 
-class DioAltProperties extends AdditionalProperties {
-  /// Changes the minimum version of Dart to 2.12 and generate null safe code
-  final bool? nullSafe;
-
-  /// nullSafe-array-default
-  /// Makes even arrays that are not listed as being required in your OpenAPI "required"
-  /// but making them always generate a default value of []
-  final bool? nullSafeArrayDefault;
-
-  /// This will turn off AnyOf support. This would be a bit weird, but you can do it if you want.
-  final bool? listAnyOf;
-
-  /// Anything in this will be split on a command added to the dependencies section of your generated code.
-  /// pubspec-dependencies
-  final String? pubspecDependencies;
-
-  /// pubspec-dev-dependencies
-  /// Anything here will be added to the dev dependencies of your generated code.
-  final String? pubspecDevDependencies;
-
-  const DioAltProperties(
-      {this.nullSafe,
-      this.nullSafeArrayDefault,
-      this.pubspecDependencies,
-      this.pubspecDevDependencies,
-      this.listAnyOf,
-      bool allowUnicodeIdentifiers = false,
-      bool ensureUniqueParams = true,
-      bool prependFormOrBodyParameters = false,
-      String? pubAuthor,
-      String? pubAuthorEmail,
-      String? pubDescription,
-      String? pubHomepage,
-      String? pubName,
-      String? pubVersion,
-      bool sortModelPropertiesByRequiredFlag = true,
-      bool sortParamsByRequiredFlag = true,
-      bool useEnumExtension = true,
-      String? sourceFolder})
-      : super(
-            allowUnicodeIdentifiers: allowUnicodeIdentifiers,
-            ensureUniqueParams: ensureUniqueParams,
-            prependFormOrBodyParameters: prependFormOrBodyParameters,
-            pubAuthor: pubAuthor,
-            pubAuthorEmail: pubAuthorEmail,
-            pubDescription: pubDescription,
-            pubHomepage: pubHomepage,
-            pubName: pubName,
-            pubVersion: pubVersion,
-            sortModelPropertiesByRequiredFlag:
-                sortModelPropertiesByRequiredFlag,
-            sortParamsByRequiredFlag: sortParamsByRequiredFlag,
-            sourceFolder: sourceFolder,
-            useEnumExtension: useEnumExtension);
-}
-
 enum DioDateLibrary {
   /// Dart core library (DateTime)
   core,

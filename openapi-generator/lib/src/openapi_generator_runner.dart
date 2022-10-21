@@ -132,7 +132,6 @@ class OpenapiGenerator extends GeneratorForAnnotation<annots.Openapi> {
                 'OpenapiGenerator :: skipping source gen because generator does not need it ::');
             break;
           case annots.Generator.dio:
-          case annots.Generator.dioAlt:
             try {
               var runnerOutput =
                   await runSourceGen(annotation, outputDirectory);
@@ -224,9 +223,6 @@ class OpenapiGenerator extends GeneratorForAnnotation<annots.Openapi> {
         break;
       case annots.Generator.dio:
         genName = 'dart-dio';
-        break;
-      case annots.Generator.dioAlt:
-        genName = 'dart2-api';
         break;
       default:
         throw InvalidGenerationSourceError(
